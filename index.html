@@ -1,17 +1,234 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=./resume.html" />
-    <title>Resume</title>
-    <link rel="canonical" href="./resume.html" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walter Danilo Galante — Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <style>
-      body { font-family: system-ui, -apple-system, Arial, sans-serif; text-align:center; padding:4rem; }
+        :root{
+            --accent: #2563EB; /* blue-600 */
+            --muted: #6B7280; /* gray-500 */
+        }
+        body { font-family: 'Inter', sans-serif; line-height: 1.45; background-color: #f8fafc; }
+        .resume-wrap { max-width: 980px; margin: 28px auto; }
+        .card { background: linear-gradient(180deg, #ffffffcc, #ffffff); box-shadow: 0 6px 18px rgba(15,23,42,0.08); border-radius: 12px; overflow: hidden; }
+        .header-bg { background: linear-gradient(90deg, rgba(37,99,235,0.06), rgba(59,130,246,0.02)); }
+        .section-header { border-bottom: 3px solid var(--accent); padding-bottom: 0.25rem; margin-bottom: 0.75rem; font-weight: 600; color: var(--accent); }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* keep name on one line */
+        h1 { white-space: nowrap; overflow-wrap: normal; }
+        /* avoid phone or contact parts wrapping */
+        .no-break { white-space: nowrap; }
+
+        /* header tagline */
+        .tagline { margin-top: 0.5rem; color: #475569; max-width: 64ch; font-weight: 500; }
+
+        /* right-side compact roles (prevent wrapping) */
+        .header-roles { white-space: nowrap; display: inline-block; }
+
+        /* custom compact list style for role bullets */
+        .compact-list { list-style: none; padding-left: 0; margin-left: 0.25rem; }
+        .role { position: relative; padding-left: 1.25rem; margin-bottom: 0.45rem; }
+        .role::before { content: ''; position: absolute; left: 0; top: 0.5rem; width: 0.45rem; height: 0.45rem; background: var(--accent); border-radius: 50%; box-shadow: 0 0 0 6px rgba(37,99,235,0.06); }
+
+        /* skill chips */
+        .chip { display: inline-block; background: #eef2ff; color: #1e40af; padding: 4px 8px; border-radius: 999px; font-size: 0.8rem; margin: 4px 4px 4px 0; }
+        
+        @media print { 
+            body { background: #fff !important; }
+            .resume-wrap { margin: 0; max-width: 100% !important; padding: 0 !important; }
+            .card { box-shadow: none; background: #fff !important;}
+            a { color: #000; text-decoration: underline; }
+            #content { padding-left: .5rem !important; padding-right: .5rem !important; }
+        }
     </style>
-  </head>
-  <body>
-    <h1>Opening resume...</h1>
-    <p>If you are not redirected automatically, <a href="./resume.html">click here to open the resume</a>.</p>
-  </body>
+</head>
+<body>
+    <div class="resume-wrap p-4">
+        <div class="card">
+            <div class="header-bg px-8 py-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Walter Danilo Galante</h1>
+                        <p class="text-sm text-slate-500 header-roles">Tech Leader • Engineering Manager • Software Architect</p>
+                        <p class="tagline text-sm">Engineering leader focused on scalable systems, high-performing teams, and pragmatic Domain-Driven Design.</p>
+                        <div class="mt-3 text-sm text-slate-600 flex flex-wrap gap-x-4 gap-y-1 items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-map-pin text-slate-400 mr-1 h-4 w-4"></i>
+                                <span>Via Avigliana 42, 10138, Torino (TO)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-slate-400 mr-2 h-4 w-4"></i>
+                                <a class="no-break" href="tel:+393466806887">(+39) 346 6806887</a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-slate-400 mr-2 h-4 w-4"></i>
+                                <a href="mailto:walterdangalante@gmail.com">walterdangalante@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-8" id="content">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                    <main class="sm:col-span-2">
+                        <section class="mb-6">
+                            <h2 class="section-header">Experience</h2>
+
+                            <div class="mb-6">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-semibold text-lg text-slate-800">Hostaway — Staff Engineer</h3>
+                                    <span class="text-sm text-slate-500">March 2025 – <strong>Present</strong></span>
+                                </div>
+                                <p class="mt-2 text-sm text-slate-700">Joined the team as Staff Engineer, in charge of scaling up and maintaining the premium-level integrations with Airbnb, Booking, Vrbo, Marriott and Google Vacation Rentals.</p>
+                                <ul class="mt-2 text-sm text-slate-700 space-y-1 compact-list">
+                                    <li class="role">Single-handedly led and implemented parts of an initiative to refresh the authentication system, introducing a login auditing system to secure customers.</li>
+                                    <li class="role">Introduced a 0-code service to handle Partner webhooks using the Inbox Pattern, relying on AWS cloud components. Achieved throughput of 40k RPM with 0% error rate and <1s latency upon first release.</li>
+                                </ul>
+                            </div>
+
+                            
+                            <div class="mb-6">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-semibold text-lg text-slate-800">Vibeslist — Staff Engineer</h3>
+                                    <span class="text-sm text-slate-500">January 2025 – March 2025</span>
+                                </div>
+                                <p class="mt-2 text-sm text-slate-700">Briefly joined a friend's young team of 3 engineers, to launch the company's prototype to a globally available AI product.</p>
+                                <ul class="mt-2 text-sm text-slate-700 space-y-1 compact-list">
+                                    <li class="role">Refactored Next.js navigation, queries on Supabase and Vercel deployment, to lower first contentful paint across the globe from >1500ms to ~500ms on average.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-semibold text-lg text-slate-800">Gorgias — Engineering Manager</h3>
+                                    <span class="text-sm text-slate-500">March 2021 – December 2024</span>
+                                </div>
+                                <p class="mt-2 text-sm text-slate-700">Successfully grew and led the Integrations domain, with over 20 people, splitting it into Channels, Ecommerce, and Phone to improve delivery speed, team cohesion and business impact.</p>
+                                <ul class="mt-2 text-sm text-slate-700 space-y-1 compact-list">
+                                    <li class="role">Phone: Transformed the product from a $500k/year loss to a $3M ARR product by restructuring its infrastructure and team dynamics.</li>
+                                    <li class="role">Channels: Scaled integrations for 16k+ merchants, implementing ETL microservices improving integration stability and scalability by 5x (measured on latency over traffic).</li>
+                                    <li class="role">Ecommerce: Expanded team maintaining Shopify integration (>$60M ARR), guiding migration to a Kafka-based pipeline. Built platform to enable AI Agents to execute e-commerce actions autonomously.</li>
+                                </ul>
+                                <p class="mt-2 text-sm text-slate-700">Spear-headed the company's adoption of Domain Driven Design practices. Led a cross-functional task force with external consultant to map domains and improve team boundaries.</p>
+                            </div>
+
+                            <div class="mb-6">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-semibold text-lg text-slate-800">Oval Money — Lead Engineer</h3>
+                                    <span class="text-sm text-slate-500">October 2017 – March 2021</span>
+                                </div>
+                                <p class="mt-2 text-sm text-slate-700">Early joiner helping grow the company from a small team to multiple teams across locations. Designed the architecture and implemented the money movement system, led developer work and culture, and managed platform releases and maintenance.</p>
+                            </div>
+
+                            <div class="mb-6">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-semibold text-lg text-slate-800">ProxToMe — Lead Engineer</h3>
+                                    <span class="text-sm text-slate-500">March 2014 – September 2017</span>
+                                </div>
+                                <p class="mt-2 text-sm text-slate-700">Developed the initial consumer app, designed and implemented an IoT platform licensed to enterprise partners, won industry awards, and built the development team.</p>
+                            </div>
+
+                            <div class="mb-6">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-semibold text-lg text-slate-800">WimLabs — Software Engineer</h3>
+                                    <span class="text-sm text-slate-500">October 2013 – March 2014</span>
+                                </div>
+                                <p class="mt-2 text-sm text-slate-700">Extended a streaming platform with mobile apps and wrote integration plugins for CMS websites (WordPress, Joomla, Drupal).</p>
+                            </div>
+
+                            <div class="mb-6">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-semibold text-lg text-slate-800">Axant — Junior Software Engineer</h3>
+                                    <span class="text-sm text-slate-500">August 2012 – December 2013</span>
+                                </div>
+                                <p class="mt-2 text-sm text-slate-700">Worked on web and mobile applications as a junior developer, adopting Agile methodologies and software design patterns.</p>
+                            </div>
+                        </section>
+                    </main>
+
+                    <aside class="sm:col-span-1">
+                        <section class="mb-6">
+                            <h2 class="section-header">Skills</h2>
+                            <div class="text-sm text-slate-700">
+                                <h4 class="font-semibold text-slate-800">Programming</h4>
+                                <div class="mt-2">
+                                    <span class="chip">Python</span>
+                                    <span class="chip">Go</span>
+                                    <span class="chip">Java</span>
+                                    <span class="chip">JavaScript</span>
+                                    <span class="chip">TypeScript</span>
+                                    <span class="chip">PHP</span>
+                                    <span class="chip">C / C++</span>
+                                    <span class="chip">Swift / Kotlin</span>
+                                </div>
+
+                                <h4 class="font-semibold mt-3 text-slate-800">Toolbelt</h4>
+                                <div class="mt-2">
+                                    <span class="chip">AWS</span>
+                                    <span class="chip">GCP</span>
+                                    <span class="chip">Flask</span>
+                                    <span class="chip">Django</span>
+                                    <span class="chip">FastAPI</span>
+                                    <span class="chip">Pydantic</span>
+                                    <span class="chip">Symfony</span>
+                                    <span class="chip">Celery</span>
+                                    <span class="chip">Kafka</span>
+                                    <span class="chip">RabbitMQ</span>
+                                    <span class="chip">Redis</span>
+                                    <span class="chip">React</span>
+                                    <span class="chip">Next.js</span>
+                                    <span class="chip">Docker</span>
+                                    <span class="chip">Kubernetes</span>
+                                    <span class="chip">Ansible & Puppet</span>
+                                    <span class="chip">Postgres</span>
+                                    <span class="chip">MySQL</span>
+                                    <span class="chip">MongoDB</span>
+                                </div>
+
+                                <h4 class="font-semibold mt-3 text-slate-800">Methodologies</h4>
+                                <div class="mt-2 text-sm text-slate-700">Agile at Scale, SCRUM, Kanban, Jira, GitLab/GitHub, Domain Driven Design</div>
+                            </div>
+                        </section>
+
+                        <section class="mb-6">
+                            <h2 class="section-header">Languages</h2>
+                            <p class="text-sm text-slate-700">Italian (Native)</p>
+                            <p class="text-sm text-slate-700">English (Bilingual)</p>
+                            <p class="text-sm text-slate-700">French (Basic)</p>
+                        </section>
+
+                        <section class="mb-6">
+                            <h2 class="section-header">Achievements & Links</h2>
+                            <div class="text-sm text-slate-700 space-y-2">
+                                <div><a href="https://www.aftership.com/blog/high-volume-ecommerce-tiktok-shop?as_source=www.aftership.com%2F">AfterShip & Gorgias — 2024</a></div>
+                                <div><a href="https://www.linkedin.com/posts/gorgias_gorgias-voice-users-rejoice-in-january-activity-7245130327604506624-MnnT">Gorgias Voice releases — 2024</a></div>
+                                <div><a href="https://www.businesscloud.co.uk/news/seedrs-and-oval-money-partner-on-in-app-start-up-investment">Oval Money — in-app investment</a></div>
+                                <div><a href="https://tcrn.ch/2tjTusJ">Oval Money — democratized investments</a></div>
+                                <div><a href="http://financetnt.com/wells-fargo-adds-proxtome-uniken-startup-accelerator-roster/">ProxToMe — Wells Fargo Accelerator</a></div>
+                                <div><a href="https://www.businesswire.com/news/home/20160222005520/en/">ProxToMe — IoT Evolution Award</a></div>
+                            </div>
+                        </section>
+
+                        <section class="mb-6">
+                            <h2 class="section-header">Education</h2>
+                            <div class="text-sm text-slate-700 space-y-2">
+                                <div>
+                                    <h4 class="font-semibold mt-3 text-slate-800">Politecnico di Torino - Computer Engineering</h4>
+                                    <p class="text-sm mt-2 text-slate-700">2011 – 2018 — Studying while working as a Junior Software Engineer</p>
+                                </div>
+                            </div>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
